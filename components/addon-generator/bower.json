@@ -1,0 +1,25 @@
+{
+  "name": "fxos-addon-generator",
+  "version": "0.2.3",
+  "homepage": "https://github.com/fxos/addon-generator",
+  "authors": [
+    "FxOS Developers <dev-gaia@lists.mozilla.com>"
+  ],
+  "main": "dist/fxos-addon-generator.js",
+  "license": "MPL",
+  "ignore": [
+    "**/.*",
+    "example",
+    "node_modules",
+    "src",
+    "test",
+    "bower.json",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "jszip": "Stuk/jszip#~2.5.0"
+  },
+  "devDependencies": {}
+}
