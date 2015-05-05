@@ -16,5 +16,15 @@
     "themeable":{},
     "settings":{ "access": "readonly" }
   },
-  "package_path": "customizer.zip"
+  "package_path": "customizer.zip",
+  "activities": {
+    "customize": {
+      "filters": {
+        "type": "apps"
+       },
+      "disposition": "inline",
+      "returnValue": true,
+      "href": "/index.html"
+    }
+  }
 }

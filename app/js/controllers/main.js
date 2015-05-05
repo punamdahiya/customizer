@@ -6,6 +6,7 @@
 /*global CopyMoveView*/
 /*global MainView*/
 
+/*global ActivityHelper*/
 /*global EditController*/
 /*global ViewSourceController*/
 /*global ActionMenuController*/
@@ -20,7 +21,19 @@ export default class MainController extends Controller {
   constructor(options) {
     super(options);
 
-    this._waitToBeOpened();
+    this.activityHelper = new ActivityHelper();
+    this.activityHelper.ready.then(mainfest => {
+      this._handleOpen(mainfest);
+    });
+  }
+
+  _handleOpen(manifest) {
+    if (manifest) {
+      console.log('Open Customizer via activity', manifest);
+    } else {
+      console.log('Listen to Gesture Detect');
+      this._waitToBeOpened();
+    }
   }
 
   get openGesture() {
